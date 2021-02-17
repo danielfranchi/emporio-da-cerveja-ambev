@@ -54,7 +54,7 @@ const Header = () => {
 
         <div>
           <BiCartAlt />
-          {total * valor}
+          <p style={{fontSize:'15px', marginLeft:'10px'}}>R$: {total * valor}</p> 
         </div>
       </header>
     </div>
