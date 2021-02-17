@@ -30,6 +30,7 @@ const Carrinhos = () => {
   const home = () => {
     setVoltar(true)
     dispatch({type: 'ZERA_CARRINHO'})
+    
   }
 
 
