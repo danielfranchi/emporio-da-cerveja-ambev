@@ -17,6 +17,7 @@ const Header = () => {
   const total = useSelector((state: QuantidadesBeers ) => state.quantidade.carrinho)
 
   const {price} = useSelector((state: any) => state.itemBeer.itensBerrs)
+
   if(price !== undefined){
     const preco = price.replace('R$ ', '')
     valor = parseFloat(preco.replace(',', '.'))
