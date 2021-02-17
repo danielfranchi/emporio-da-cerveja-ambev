@@ -13,9 +13,15 @@ import { BiCartAlt } from "react-icons/bi";
 
 const Header = () => {
 
+  let valor: number = 0
   const total = useSelector((state: QuantidadesBeers ) => state.quantidade.carrinho)
 
   const {price} = useSelector((state: any) => state.itemBeer.itensBerrs)
+  if(price !== undefined){
+    const preco = price.replace('R$ ', '')
+    valor = parseFloat(preco.replace(',', '.'))
+  }
+
 
   const [produtos, setProduto] = React.useState<string[]>([])
   const token = localStorage.getItem("token")
@@ -47,7 +53,7 @@ const Header = () => {
 
         <div>
           <BiCartAlt />
-          {total}
+          {total * valor}
         </div>
       </header>
     </div>
